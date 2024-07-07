@@ -1,0 +1,110 @@
+/* body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+} */
+
+/* HEADER */
+   header{
+      margin-top: 15px;
+   }
+   h1{
+      text-align: center;
+      color: var(--clr-info);
+   }
+   /* Makes a bigger "C" in the h1 */
+   h1 span{
+      font-size: larger;
+   }
+
+/* MAIN-SECTION */
+   .section-form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+/* FORM */
+   .form{
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: space-between;
+      width: 250px;
+      background-color: rgba(255, 255, 255, 0.11);
+      padding: 5px;
+      border-radius: 28px;
+      transition: background-color 0.3s;
+
+   }
+   .form:hover{
+      border: 1px solid black;
+
+   }
+   .form__input {
+      padding: 5px 20px;
+      border: none;
+      border-radius: 28px;
+      background:transparent;
+      outline: none;
+      margin-right: 10px;
+      color: rgb(171, 202, 248);
+      font-size:var( --size-sm) ;
+      font-family: 'Montserrat', Arial, sans-serif;
+       /* font-family: 'Lato', Helvetica, Arial, sans-serif; */
+  }
+  
+  .form__input::placeholder {
+   color: rgba(255, 255, 255, 0.452);
+   font-family: 'Montserrat', Arial, sans-serif;
+   font-style: italic;
+   }
+
+   /*button*/
+   .form__submit{
+      background:transparent;
+      border: none;
+      padding-right: 10px;
+   }
+   .form__submit:hover{
+     cursor: pointer;
+     transform:scale(1.1);
+     transition: 1s;
+   }
+
+   .fa-search{
+      color: var( --clr-interaction);
+   }
+   /* form suggestions */
+   .suggestions{
+      padding: 0 10px;
+      position: absolute;
+      background-color: var(--clr-dark);
+      width: 250px;
+      border-radius: 5px;
+      z-index: 1;
+   } 
+   .form__suggestion-item{
+      padding-top: 5px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.137);
+      color: #c5d8ee96;
+   }
+   .form__suggestion-item:hover{
+      border-bottom: 1px solid var(--clr-interaction);
+      color: #c5d8eece;
+      cursor: pointer;
+   }
+
+   /* CRYPTO */
+   .crypto{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   
+   /* INTODUCTION */
+
+   .shrink{
+      width: 10px;
+   }

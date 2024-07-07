@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/outils.css">
+    <link rel="stylesheet" href="./styles/components/main-page/search.css">
+    <link rel="stylesheet" href="./styles/components/main-page/navBar.css">
+    <link rel="stylesheet" href="./styles/components/main-page/mobileNav.css">
+    <link rel="stylesheet" href="./styles/components/main-page/tab.css">
+
+    <!-- OTHER LINK -->
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- FONT LINK -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <title>LiveCrypto | Official</title>
+</head>
+<body>
+<!-- NAVS -->
+    <nav class="nav container">
+        <ul class="nav__li-container ">
+            <li><a href="#search">Search crypto</a></li>
+            <li><a href="#overView">Over View</a></li>
+        </ul>
+
+       
+        <button class="header__menuHamburger">
+            <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 24 24" 
+            fill="currentColor" 
+            class="w-6 h-6">
+
+              <path fill-rule="evenodd" d="M3 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 5.25Zm0 4.5A.75.75 0 0 1 3.75 9h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 9.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+
+            </svg>
+            
+          </button>
+    </nav>
+    <nav class="mobileNav">
+        <div>
+            <ul class="mobileNav__li-container container">
+                <li><a class="mobileNav__a"  href="#search">Search crypto</a></li>
+                <li><a class="mobileNav__a" href="#overView">Over View</a></li>
+                <li><a class="mobileNav__a" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        
+    </nav>
+
+<!-- TITLE -->
+    <header>
+        <h1>live <span>c</span>rypto</h1>       
+    </header>
+
+<!-- CURRENCY CHOICE -->
+    <section class="nav__currency section-marge">
+        <label class="nav__currency-label" for="nav__currency-choice">Device</label>
+        <select name="currency" id="nav__currency-choice">
+            <option value="usd">$usd</option>
+            <option value="eur">€eur</option>
+            <option value="gbp">£gbp</option>
+            <option value="jpy">¥jpy</option>
+            <option value="cny">¥cny</option>
+            <option value="inr">₹inr</option>
+    </select>
+    </section>
+    
+<!-- SEARCH SECTION -->
+    <section class="section-form container section-marge">
+
+        <form method="GET">
+            <div class="form">
+                <input class="form__input" type="text" placeholder="search crypto ..." >
+                <button class="form__submit" type="submit">
+                    <i class="fa fa-search" ></i>
+                </button>
+            </div>
+            
+            <div class="suggestions"></div>
+        </form>
+    </section>
+
+<!-- TABLES OF TOKEN INFORMATIONS AND DETAILS -->
+        <section class="table section-marge">
+            <div class="table__choice-container">
+                <a href="#table__priceChange" class="table__choice price_choice "><span class="active">Price Variation(%)</span></a >
+                <a href="#table__market" class="table__choice market_choice"><span>Market Cap</span></a >
+            </div>
+
+            <div class="table__scroll">
+                <div class="table__width">
+                    <div class="table__container">
+                        <table class="table__priceChange" id="#table__priceChange">
+                            <thead>
+                                <tr>
+                                    <th>Period</th>
+                                    <th>Price Change</th>
+                                </tr>
+                            </thead>
+        
+                            <tbody>
+                                <tr>
+                                    <td>24h Change</td>
+                                    <td class="crypto__change-24h"></td>
+                                </tr>
+                                <tr>
+                                    <td>7d Change</td>
+                                    <td class="crypto__change-7d"></td>
+                                </tr>
+                                <tr>
+                                    <td>30d Change</td>
+                                    <td class="crypto__change-30d"></td>
+                                </tr>
+                            </tbody>
+                           
+                        </table>
+        
+                        <table class="table__market" id="table__market">
+                            <thead>
+                                <tr>
+                                    <th>Period</th>
+                                    <th>Price Change</th>
+                                </tr>
+                            </thead>
+        
+                            <tbody>
+                                <tr>
+                                    <td>24h Change</td>
+                                    <td class="crypto__change-24h"></td>
+                                </tr>
+                                <tr>
+                                    <td>7d Change</td>
+                                    <td class="crypto__change-7d"></td>
+                                </tr>
+                                <tr>
+                                    <td>30d Change</td>
+                                    <td class="crypto__change-30d"></td>
+                                </tr>
+                            </tbody>
+                           
+                        </table>
+                    </div>
+                </div>
+               
+            </div>
+            
+          
+        </section>
+
+<!-- OTHER TOKEN INFORMATIONS AND DETAILS -->
+        <section class="crypto section-marge">
+
+        </section>
+
+    <section class="introduction container section-marge">
+        <div class="introduction__text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti perspiciatis <strong>obcaecati</strong>  sunt soluta voluptate nulla quibusdam, optio, voluptatum excepturi molestias quasi assumenda veniam asperiores. Nesciunt quidem perspiciatis voluptatem ipsam non!
+        </div>
+    </section>
+
+    <footer class="container section-marge"></footer>
+    <script src="script.js"></script>
+</body>
+</html>

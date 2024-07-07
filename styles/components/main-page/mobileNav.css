@@ -1,0 +1,48 @@
+.mobileNav{
+    position: absolute;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+    background-color:#0d1727ea;
+    border-right: 1px solid var(--clr-light);
+    border-radius: 5px;
+}
+/* .mobileNav div{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: #1e293b00;
+    z-index: 1;
+    height: 85%;
+    width: 80%;
+
+} */
+
+.mobileNav__li-container{
+margin-top: 100px;
+display: flex;
+flex-direction: column;
+gap: 30px;
+
+}
+.mobileNav__li-container li{
+    border-bottom: 1px solid var(--clr-light);
+    padding-bottom: 8px;
+
+}
+
+.mobileNav__a{
+    text-transform:uppercase;
+    
+}
+.header__menuHamburger{
+    color: var(--clr-light);
+    display: block;
+    height: var(--size-2xl);
+     width: var(--size-2xl);
+
+}

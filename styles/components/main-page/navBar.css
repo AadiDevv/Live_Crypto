@@ -1,0 +1,29 @@
+.nav{
+    display: flex;
+    justify-content:left;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+.nav__li-container{
+ display: none;
+}
+
+/*Currency choice*/
+.nav__currency{
+    display: flex;
+    justify-content: right;
+}
+#nav__currency-choice{
+    border-radius: 5px;
+    background-color: var(--clr-slate800);
+    color: var( --clr-options);
+    border: 1px solid var(--clr-slate400);
+    outline:none
+}
+.nav__currency-label{
+    font-style: italic;
+    font-size:  var( --size-sm	);
+    text-transform: lowercase;
+    color: var(--clr-slate400);
+    display: none;
+}

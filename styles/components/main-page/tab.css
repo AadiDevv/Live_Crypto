@@ -1,0 +1,52 @@
+/* .table{
+    
+} */
+
+/*CHOICES*/
+    .table__choice-container{
+        display: flex;
+        justify-content: space-evenly;
+        border: 1px solid white;
+        padding: 10px 0px;
+    }
+    .table__choice{
+        text-align: center;
+        width:100%;
+    }
+    
+    .table__choice span{
+        color: rgb(134, 143, 156);
+        font-weight: 510;
+        /* color: var(--clr-options); */
+       
+        padding: 5px 0px;
+    }
+    .table__choice span:hover{
+        cursor: pointer;
+         }
+    .table__choice .active{
+        color: rgb(255, 255, 255);
+        font-weight: 600;
+        /* color: var(--clr-options); */
+        border-bottom: 2px solid var(--clr-info);
+        padding: 5px 0px;
+    }
+        
+/*TABLES*/
+.table__scroll{
+    overflow-x: scroll;
+}
+.table__width{
+    overflow-y:hidden;
+    width: 200%;
+}
+.table__container{
+    display: flex;
+    justify-content:space-around;
+}
+/* .table__market{
+   
+} */
+.table__priceChange, .table__market{
+    width: 50%;
+}
