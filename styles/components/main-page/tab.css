@@ -1,13 +1,18 @@
 /* .table{
     
 } */
-
+.table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /*CHOICES*/
     .table__choice-container{
         display: flex;
         justify-content: space-evenly;
-        border: 1px solid white;
+        border-top: 1px solid var(--clr-slate600);
         padding: 10px 0px;
+        width: 400px;
     }
     .table__choice{
         text-align: center;
@@ -16,7 +21,7 @@
     
     .table__choice span{
         color: rgb(134, 143, 156);
-        font-weight: 510;
+        font-weight: 500;
         /* color: var(--clr-options); */
        
         padding: 5px 0px;
@@ -26,27 +31,43 @@
          }
     .table__choice .active{
         color: rgb(255, 255, 255);
-        font-weight: 600;
+        font-weight: 500;
         /* color: var(--clr-options); */
         border-bottom: 2px solid var(--clr-info);
         padding: 5px 0px;
     }
         
-/*TABLES*/
+/*TABLE over flow*/
 .table__scroll{
-    overflow-x: scroll;
+    overflow-x:hidden;
+    width: 400px;
 }
 .table__width{
-    overflow-y:hidden;
+    overflow-x:hidden;
     width: 200%;
 }
 .table__container{
     display: flex;
-    justify-content:space-around;
+    justify-content:space-between;
+    /* width: 100%; */
+    border: 1px solid;
 }
-/* .table__market{
-   
-} */
-.table__priceChange, .table__market{
+
+/* TABLE STYLING */
+
+.tables{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around; */
+    border: 1px solid red;
+    /* margin: auto; */
     width: 50%;
+
+}
+tr{
+text-align: center;
+border: 1px solid red;
+}
+th,tr{
+    font-family:sans-serif, Times, serif;
 }

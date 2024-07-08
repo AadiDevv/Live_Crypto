@@ -11,9 +11,12 @@
     const btnEl = document.querySelector('.form__submit');
     //table section
     const tableSectionEl = document.querySelector('.table');
+    const tbChoiceContainer = document.querySelector('.table__choice-container')
+    const tbChoiceEl = document.querySelectorAll('.table__span');
     const tableContainerEl =  document.querySelector('.table__container');
     const tableWidthEl =document.querySelector('.table__width');
     const scrollDivEL=document.querySelector('.table__scroll');
+
 
     //other info
     const cryptoContainerEl = document.querySelector('.crypto');
@@ -163,10 +166,12 @@
                     cryptoContainerEl.appendChild(cryptoDescEl);
                         
                     scrollBehavior();
-                // Hide intro text and refresh data
+                    //Update search status
                     searchSuccessful = true;
+                    // Hide intro text and refresh data
                     refresh(crypto);
                     updateIntroText();
+                    tbChoice();
                 }
             
         } catch (error) {
@@ -276,6 +281,25 @@
         }
     })
 
+//TABS
+    //when succesful surch display tab choice
+    function tbChoice (){
+        if(searchSuccessful){
+            tbChoiceContainer.style.display = 'flex';
+        }else{
+            tbChoiceContainer.style.display = 'none';
+        }
+    };
+    // tbChoice();
+
+    tbChoiceEl.forEach(element=>{
+        element.addEventListener('click',(event)=>{
+
+            tbChoiceEl.forEach(el=> el.classList.remove('active'));
+            event.target.classList.add('active');
+        })
+    })
+    
 // UTILITY FUNCTIONS 
     //format display of numbers 
     function formatNumber(num) {
@@ -334,6 +358,7 @@
 
         //  //create the div to contain the table
          table.classList.add(`table__${tbName}`);
+         table.classList.add('tables');
          table.id = `table__${tbName}`;
          //append to div
          tableContainerEl.appendChild(table);
