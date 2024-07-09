@@ -5,12 +5,13 @@
     /* MAIN COLORS */
     --clr-light:#f1f5f9;
     --clr-dark:#1e1e1e;
-    --clr-slate400:rgb(148, 163, 184);
+    --clr-slate400:#dddddd;
     --clr-slate600:#475569;
     --clr-slate800:#1e293b;
-    --clr-interaction:#4a90e2;
+    --clr-interaction:#0861c5;
     --clr-options:#2ecc71;
     --clr-info:#f1c40f;
+    --clr-secondary:#421e18;
     /* rose rgb(225, 29, 72) */
   
         /* FONT SIZING */

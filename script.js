@@ -1,6 +1,7 @@
 // HTML to JS
     //gen
     const introTextEl =document.querySelector('.introduction__text');
+    const introSecEl = document.querySelector('.introduction');
 
     //nav
     const currencyChoiceEl = document.querySelector('#nav__currency-choice');
@@ -126,7 +127,7 @@
                     //Tab
                    
                         // price change Tab
-                        function tab1(){
+                        const tab1 = ()=>{
                             let header = ['Period','Price Change'];
                             let row1 = ['24h Change',tknPriceChangeD.toFixed(2)+' %'];
                             let row2 = ['7d Change',tknPriceChangeW.toFixed(2)+' %'];
@@ -136,14 +137,15 @@
                         };
                         tab1();
                         // market data Tab
-                        let header = ['Category',`Devise (${currency.toUpperCase()})`];
-                        let row1 = [`Market Capitalization `,formatNumber(tknCapital)];
-                        let row2 = [`24h Trading Volume`,formatNumber(tknTradVol24h)];
-                        let row3 = ['24h Market Cap Change (%)',tknCapVol24h.toFixed(2)+' %'];
-                        let row4 = [`Total Volume`,formatNumber(tknVolumeTotal)];
-                        createTab('market',header,row1,row2,row3,row4);
-
-                       
+                        const tab2 = ()=>{
+                            let header = ['Category',`Devise (${currency.toUpperCase()})`];
+                            let row1 = [`Market Capitalization `,formatNumber(tknCapital)];
+                            let row2 = [`24h Trading Volume`,formatNumber(tknTradVol24h)];
+                            let row3 = ['24h Market Cap Change (%)',tknCapVol24h.toFixed(2)+' %'];
+                            let row4 = [`Total Volume`,formatNumber(tknVolumeTotal)];
+                            createTab('market',header,row1,row2,row3,row4);
+                        };
+                        tab2();     
                     //Details
                         let cryptoDetailsEl = document.createElement('div');
                         cryptoDetailsEl.classList.add('crypto__details');
@@ -163,7 +165,7 @@
                     cryptoDescEl.classList.add('crypto__description');
                     cryptoDescEl.innerHTML = 
                     `<p class="crypto__description">${tknDescription}</p>`;
-                    cryptoContainerEl.appendChild(cryptoDescEl);
+                    introSecEl.appendChild(cryptoDescEl);
                         
                     scrollBehavior();
                     //Update search status
@@ -235,7 +237,10 @@
                 return;
             }else{
                 data = await request.json();
-                return data.coins.map( coins => coins.id);
+                return data.coins.map(coin => ({
+                    id: coin.id,
+                    icon: coin.thumb 
+                }));
             }
         } catch (error) {
             console.log('Error while fetching')
@@ -252,17 +257,30 @@
     }
     //function display
     const displayList = (tokens)=>{
+
         suggestionsEl.innerHTML='';
         const maxSuggestion = 5;
         for(let i=0; i<tokens.length &&  i<maxSuggestion ; i++){
            
                 const item = document.createElement('div');
                 item.classList.add('form__suggestion-item');
-                item.textContent = tokens[i];
+
+                let img = document.createElement('img');
+                img.src = tokens[i].icon;
+                img.alt = 'icon';
+                img.classList.add('icon');
+
+                let text = document.createElement('span');
+                text.textContent = tokens[i].id;
+                
+
+                item.appendChild(img);
+                item.appendChild(text) 
+                
                 suggestionsEl.appendChild(item);
     
                 item.addEventListener('click',()=>{
-                    inputEl.value = tokens[i];
+                    inputEl.value = tokens[i].id;
                     suggestionsEl.style.display='none'
                 });
             
@@ -347,6 +365,7 @@
                 row.forEach((cell,cellIndex)=>{
                     //creating td 
                     let td = document.createElement('td');
+                    td.classList.add(`cell${cellIndex+1}`);
                     td.classList.add(`tbBody_row${rowIndex+1}-cell${cellIndex+1}`);
                     td.textContent = cell;
                     //append td
@@ -382,3 +401,4 @@
             tbMarket.scrollIntoView({behavior:'smooth', block:'end' });
         })
     }
+    scrollBehavior();

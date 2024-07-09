@@ -80,22 +80,26 @@
    .suggestions{
       padding: 0 10px;
       position: absolute;
-      background-color: var(--clr-dark);
+      background-color: #1e1e1ef5;
       width: 250px;
       border-radius: 5px;
       z-index: 1;
    } 
    .form__suggestion-item{
-      padding-top: 5px;
+      padding: 15px 0px;
       border-bottom: 1px solid rgba(148, 163, 184, 0.137);
       color: #c5d8ee96;
+      display: flex;
+      gap: 5px;
    }
    .form__suggestion-item:hover{
       border-bottom: 1px solid var(--clr-interaction);
       color: #c5d8eece;
       cursor: pointer;
    }
-
+   .form__suggestion-item .icon{
+      width:var(--size-m);
+   }
    /* CRYPTO */
    .crypto{
       display: flex;
