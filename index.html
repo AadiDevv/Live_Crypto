@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./styles/components/main-page/navBar.css">
     <link rel="stylesheet" href="./styles/components/main-page/mobileNav.css">
     <link rel="stylesheet" href="./styles/components/main-page/tab.css">
-
+    <link rel="stylesheet" href="./styles/components/main-page/cryptoData.css">
     <!-- OTHER LINK -->
     <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -25,6 +25,7 @@
 </head>
 <body>
 <!-- NAVS -->
+
     <nav class="nav container">
         <ul class="nav__li-container ">
             <li><a href="#search">Search crypto</a></li>
@@ -92,6 +93,24 @@
 
 <!-- OTHER TOKEN INFORMATIONS AND DETAILS -->
     <section class="crypto section-marge">
+
+        <div class="crypto__nameAndprice">
+            <h2 class="crypto__name"><img src=""><p>bitcoin</p><span class="crypto__name-short">(BTC)</span></h2>
+    
+            <div class="crypto__price-container"><h2 class="crypto__price">60000<span class="crypto__price-devise">$</span></h2><p class="crypto__price-change">2%</p></div>
+        </div>
+        <div class="crypto__details">
+        <p><strong>Market Cap Rank :</strong> <span class="crypto__rank" >${tknMarketRank}</span></p>
+        <p><strong>24h Volume :</strong> <span class="crypto__volume-24h" >${formatNumber(tknVolumeTotal)}${currencyLogo}</span></p>
+        <p><strong>Total Supply :</strong> <span class="crypto__total-supply" >${formatNumber(tknTotalSupply)}</span></p>
+        <p><strong>Circulating Supply :</strong> <span class="crypto__circulating-supply" >${formatNumber(tknCirculeSupply)}</span></p>
+        <p><strong>Genesis Date :</strong> <span class="crypto__genesis-date">${tknCreaDate}</span></p>
+        <p><strong>Homepage :</strong> <a class="crypto__homepage" href="${tknHomePage}"  target="_blank">${tknHomePage}</a></p>
+        <p><strong>Reddit :</strong> <a class="crypto__reddit" href="${tknReddit}"  target="_blank"><img class="icon_reddit" src="./styles/Medias/reddit-logo-2436.png" alt="Reddit Icon"></a></p>
+        
+        </div>
+        
+        
     </section>
 <!-- TABLES OF TOKEN INFORMATIONS AND DETAILS -->
     <section class="table section-marge">
@@ -104,7 +123,7 @@
             <div class="table__width">
                 <div class="table__container">
             
-                    <table class="tables table__priceChange" id="#table__priceChange">
+                    <!-- <table class="tables table__priceChange" id="#table__priceChange">
                         <thead>
                             <tr>
                                 <th>Period</th>
@@ -152,7 +171,7 @@
                             </tr>
                         </tbody>
                     
-                    </table>
+                    </table> -->
                 </div>
             </div>
         

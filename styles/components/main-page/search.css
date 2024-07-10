@@ -4,7 +4,9 @@
     align-items: center;
 
 } */
-
+.icon_reddit{
+   width: 30px;
+}
 /* HEADER */
    header{
       margin-top: 15px;

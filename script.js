@@ -115,15 +115,25 @@
                 tableContainerEl.innerHTML='';
                 //IMPLIMENT DATA TO HTML
                     // General
+                        
+                        let cryptoNamePriceEl = document.createElement('div');
+                        cryptoNamePriceEl.classList.add('crypto__nameAndprice')
+
                         //name
-                        let cryptoNameEl = document.createElement('div');
-                        cryptoNameEl.innerHTML = `<h2 class="crypto__name"><img src="${tknIconUrl}">${tknName}<span class="crypto__name-short">(${tknShortName})</span></h2>`;
-                        cryptoContainerEl.appendChild(cryptoNameEl);
+                        let cryptoNameEl = document.createElement('h2');
+                        cryptoNameEl.classList.add('crypto__name');
+                        cryptoNameEl.innerHTML = `<img src="${tknIconUrl}"><p>${tknName}</p><span class="crypto__name-short">(${tknShortName})</span>`;
+                        cryptoNamePriceEl.appendChild(cryptoNameEl);
                         //price
                         let cryptoPriceEl = document.createElement('div');
-                        cryptoPriceEl.classList.add('crypto__price')
-                        cryptoPriceEl.innerHTML = `<div class="crypto__info-price">${tknPrice}${currencyLogo}</div>`;
-                        cryptoContainerEl.appendChild(cryptoPriceEl);
+                        cryptoPriceEl.classList.add('crypto__price-container')
+                        cryptoPriceEl.innerHTML = `<h2 class="crypto__price">${tknPrice}<span class="crypto__price-devise">${currencyLogo}</span></h2><p class="crypto__price-change">${tknPriceChangeD.toFixed(2)} %</p>`;
+                        cryptoNamePriceEl.appendChild(cryptoPriceEl);
+                        cryptoContainerEl.appendChild(cryptoNamePriceEl);
+                        //apply color for changing data
+                        let a = document.querySelector('.crypto__price-change');
+                        dataChangeColor(tknPriceChangeD,a); 
+
                     //Tab
                    
                         // price change Tab
@@ -150,13 +160,13 @@
                         let cryptoDetailsEl = document.createElement('div');
                         cryptoDetailsEl.classList.add('crypto__details');
                         cryptoDetailsEl.innerHTML = `
-                            <p><strong>Market Cap Rank:</strong> <span class="crypto__rank" >${tknMarketRank}</span></p>
-                            <p><strong>24h Volume:</strong> <span class="crypto__volume-24h" >${formatNumber(tknVolumeTotal)}${currencyLogo}</span></p>
-                            <p><strong>Total Supply:</strong> <span class="crypto__total-supply" >${formatNumber(tknTotalSupply)}</span></p>
-                            <p><strong>Circulating Supply:</strong> <span class="crypto__circulating-supply" >${formatNumber(tknCirculeSupply)}</span></p>
-                            <p><strong>Genesis Date:</strong> <span class="crypto__genesis-date">${tknCreaDate}</span></p>
-                            <p><strong>Homepage:</strong> <a class="crypto__homepage" href="${tknHomePage}"  target="_blank">${tknHomePage}</a></p>
-                            <p><strong>Reddit:</strong> <a class="crypto__reddit" href="${tknReddit}"  target="_blank">${tknReddit}</a></p>
+                            <p><strong>Market Cap Rank :</strong> <span class="crypto__rank" >${tknMarketRank}</span></p>
+                            <p><strong>24h Volume :</strong> <span class="crypto__volume-24h" >${formatNumber(tknVolumeTotal)}${currencyLogo}</span></p>
+                            <p><strong>Total Supply :</strong> <span class="crypto__total-supply" >${formatNumber(tknTotalSupply)}</span></p>
+                            <p><strong>Circulating Supply :</strong> <span class="crypto__circulating-supply" >${formatNumber(tknCirculeSupply)}</span></p>
+                            <p><strong>Genesis Date :</strong> <span class="crypto__genesis-date">${tknCreaDate}</span></p>
+                            <p><strong>Homepage :</strong> <a class="crypto__homepage" href="${tknHomePage}"  target="_blank">${tknHomePage}</a></p>
+                            <p><strong>Reddit :</strong> <a class="crypto__reddit" href="${tknReddit}"  target="_blank"><img class="icon_reddit" src="./styles/Medias/reddit-logo-2436.png" alt="Reddit Icon"></a></p>
                             
                         `;
                         cryptoContainerEl.appendChild(cryptoDetailsEl);
@@ -402,3 +412,19 @@
         })
     }
     scrollBehavior();
+    function dataChangeColor(data,htmlEL){
+            
+            if(data < 0){
+                htmlEL.classList.remove('positive');
+                htmlEL.classList.add('negative');
+                
+            }else if(data > 0){
+                htmlEL.classList.remove('negative');
+                htmlEL.classList.add('positive');
+            }else{
+                htmlEL.classList.remove('negative');
+                htmlEL.classList.remove('positive');
+            }
+        }
+          
+        

@@ -1,0 +1,84 @@
+/*TOKEN DATA*/
+
+/* section */
+.crypto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+/* Name */ 
+    .crypto__nameAndprice{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        gap: 10px;
+    }
+    .crypto__name{
+        display: flex;
+        align-items: center;
+        /* gap: 5px; */
+    }
+    .crypto__name p{
+        margin-right: 5px;
+        text-transform: capitalize;
+    }
+    .crypto__name-short{
+        font-size: 0.7em;
+        color: var(--clr-slate600);
+    }
+    /* price */
+    .crypto__price-container{
+        display: flex;
+        align-items:center;
+    }
+    .crypto__price{
+        font-size: var(--size-4xl);
+        margin-right: 5px;
+    }
+/* Gen data */
+    /* section div-child data */
+    .crypto__details {
+        padding: 10px 25px;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        min-width: 250px;
+        max-width: 400px;
+    }
+
+    .crypto__details p {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: var(--size-sm);
+        margin: 5px 0;
+        border-bottom: 1px solid var(--clr-slate800);
+        padding-bottom: 5px;
+    }
+
+    .crypto__details p strong {
+        color: var(--clr-info);
+        text-transform: capitalize;
+        font-weight: 500;
+
+    }
+
+    .crypto__details p span {
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    .crypto__details p a {
+        color: var(--clr-interaction);
+        text-decoration: none;
+    }
+
+    .crypto__details p a:hover {
+        text-decoration: underline;
+    }
+
+    .icon_reddit {
+        width: 20px;
+        height: 20px;
+    }

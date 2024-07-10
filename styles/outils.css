@@ -3,6 +3,13 @@
 .section-marge{
     margin-top: 30px;
 }
+/*For data %, appply with JS*/
+.positive{
+    color:#4CAF50 ;
+}
+.negative{
+    color:#F44336 ;
+}
 
 
 /* xs */
@@ -16,9 +23,9 @@
 }
 /* s */
 @media(min-width :640px){
-   .container{
+    .container{
         max-width: 640px;
-    }
+    } 
 }
 /* m */
 @media(min-width :768px){
