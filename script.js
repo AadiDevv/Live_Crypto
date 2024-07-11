@@ -127,7 +127,7 @@
                         //price
                         let cryptoPriceEl = document.createElement('div');
                         cryptoPriceEl.classList.add('crypto__price-container')
-                        cryptoPriceEl.innerHTML = `<h2 class="crypto__price">${tknPrice}<span class="crypto__price-devise">${currencyLogo}</span></h2><p class="crypto__price-change">${tknPriceChangeD.toFixed(2)} %</p>`;
+                        cryptoPriceEl.innerHTML = `<h2 class="crypto__price">${tknPrice.toLocaleString('fr-FR')}<span class="crypto__price-devise">${currencyLogo}</span></h2><p class="crypto__price-change">${tknPriceChangeD.toFixed(2)} %</p>`;
                         cryptoNamePriceEl.appendChild(cryptoPriceEl);
                         cryptoContainerEl.appendChild(cryptoNamePriceEl);
                         //apply color for changing data
@@ -144,6 +144,12 @@
                             let row3 = ['30d Change',tknPriceChangeM.toFixed(2)+' %'];
                             let row4 = ['1y Change',tknPriceChangeY.toFixed(2)+' %'];
                             createTab('priceChange',header,row1,row2,row3,row4);
+                            //Giving color red or green for the positif or negativ data
+                            const priceChange = [tknPriceChangeD,tknPriceChangeW,tknPriceChangeM,tknPriceChangeY];
+                            priceChange.forEach((data,i)=>{
+                                const cell = document.querySelector(`.tbBody_row${i+1}-cell2`);
+                                dataChangeColor(data,cell);
+                            })
                         };
                         tab1();
                         // market data Tab
@@ -375,6 +381,7 @@
                 row.forEach((cell,cellIndex)=>{
                     //creating td 
                     let td = document.createElement('td');
+                    td.classList.add('cell')
                     td.classList.add(`cell${cellIndex+1}`);
                     td.classList.add(`tbBody_row${rowIndex+1}-cell${cellIndex+1}`);
                     td.textContent = cell;

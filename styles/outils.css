@@ -3,6 +3,9 @@
 .section-marge{
     margin-top: 30px;
 }
+.div-margin{
+    margin-bottom: 30px;
+}
 /*For data %, appply with JS*/
 .positive{
     color:#4CAF50 ;

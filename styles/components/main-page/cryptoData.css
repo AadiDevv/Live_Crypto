@@ -6,36 +6,51 @@
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    
 }
 /* Name */ 
     .crypto__nameAndprice{
         display: flex;
         flex-direction: column;
         align-items:center;
-        gap: 10px;
+        gap: 20px;
     }
     .crypto__name{
         display: flex;
         align-items: center;
-        /* gap: 5px; */
+        gap: 5px;
+        padding: 10px 50px;
+        border-radius: 50px;
+        /* margin-bottom: 10px; */
+        box-shadow: 0px 20px 10px rgba(0, 0, 2, 0.185);
+
     }
     .crypto__name p{
         margin-right: 5px;
         text-transform: capitalize;
+        /* margin: ; */
     }
     .crypto__name-short{
         font-size: 0.7em;
         color: var(--clr-slate600);
     }
-    /* price */
+/* Price */
     .crypto__price-container{
         display: flex;
         align-items:center;
+        /* box-shadow: 0px 20px 10px rgba(0, 0, 0,0.15);
+        padding: 10px;
+        border-radius: 25px; */
     }
     .crypto__price{
         font-size: var(--size-4xl);
         margin-right: 5px;
     }
+    .crypto__price-devise{
+        font-size: var(--size-xs);
+        font-weight: lighter;
+    }
+
 /* Gen data */
     /* section div-child data */
     .crypto__details {

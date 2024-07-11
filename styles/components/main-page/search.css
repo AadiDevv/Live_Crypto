@@ -4,9 +4,6 @@
     align-items: center;
 
 } */
-.icon_reddit{
-   width: 30px;
-}
 /* HEADER */
    header{
       margin-top: 15px;
@@ -25,6 +22,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin: 0 auto;
    }
 
 /* FORM */
@@ -110,7 +108,7 @@
    }
    
    /* INTODUCTION */
-
-   .shrink{
-      width: 10px;
+   .introduction{
+      width: 85%;
+      margin: 0 auto;
    }

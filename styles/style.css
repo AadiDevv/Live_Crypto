@@ -14,9 +14,9 @@
     /* rose rgb(225, 29, 72) */
   
         /* FONT SIZING */
-    --size-2xs	: 0.5rem; /*8px*/ 
-    --size-xs	: 0.75rem; /* 12px */
-    --size-sm	: 0.875rem; /* 14px */
+    --size-2xs	: 0.5em; /*8px*/ 
+    --size-xs	: 0.75em; /* 12px */
+    --size-sm	: 0.875em; /* 14px */
     --size-base: : 1rem; /* 16px */
     --size-lg	: 1.125rem; /* 18px */
     --size-xl	: 1.25rem; /* 20px */
