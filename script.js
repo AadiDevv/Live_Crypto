@@ -21,11 +21,15 @@
 
     //other info
     const cryptoContainerEl = document.querySelector('.crypto');
+    const cryptoDescEl = document.querySelector('.crypto__description')
+    const button = document.querySelector('.description__btn');
+
 
 //VAR
     let inputData = '';
 
     let searchSuccessful = false;
+    let newCryptoSearch = true;
     let refreshInterval;
 
 //CURRENCY CHOICE
@@ -55,6 +59,7 @@
     formEl.addEventListener('submit', (e)=>{
         e.preventDefault();
         inputData = inputEl.value.trim().toLowerCase();
+        newCryptoSearch = true;
         getCrypto(inputData);
         inputEl.value = '';
     })
@@ -113,6 +118,7 @@
                 //clear from previous data
                 cryptoContainerEl.innerHTML= '';
                 tableContainerEl.innerHTML='';
+               
                 //IMPLIMENT DATA TO HTML
                     // General
                         
@@ -177,15 +183,19 @@
                         `;
                         cryptoContainerEl.appendChild(cryptoDetailsEl);
                     //Description
-                    let cryptoDescEl = document.createElement('div');
-                    cryptoDescEl.classList.add('crypto__description');
-                    cryptoDescEl.innerHTML = 
-                    `<p class="crypto__description">${tknDescription}</p>`;
-                    introSecEl.appendChild(cryptoDescEl);
-                        
+                   
+                        if(newCryptoSearch){
+                            cryptoDescEl.innerHTML='';
+                            cryptoDescEl.textContent = tknDescription;
+                            // handleDescripton(tknDescription,cryptoDescEl);
+                        }
+                    
+                    // cryptoDescEl.innerHTML = 
+                    // `<p>${tknDescription}</p>`;
                     scrollBehavior();
                     //Update search status
                     searchSuccessful = true;
+                    newCryptoSearch = false;
                     // Hide intro text and refresh data
                     refresh(crypto);
                     updateIntroText();
@@ -433,5 +443,31 @@
                 htmlEL.classList.remove('positive');
             }
         }
-          
+    // function handleDescripton(description, cryptoContainerEl){      
+    //     const maxLength = 400;
+
+    //     if(description.length <= maxLength){
+    //         cryptoContainerEl.textContent = description;
+    //         return;
+    //     }
+         
+    //     const shortText = description.slice(0,maxLength)+'...';
+    //     const longText = description;
+
+    //     // cryptoContainerEl.textContent = shortText;
+    //     button.style.display='block';
+    //    
+    //     function handleBtn(){
+    //         if(button.textContent === 'see more'){
+    //             cryptoContainerEl.textContent = longText;
+    //             button.textContent = 'see less';
+    //         }else if(button.textContent === 'see less'){
+    //             cryptoContainerEl.textContent = shortText;
+    //             button.textContent = 'see more';
+    //         }
+    //     }
+    //     button.removeEventListener('click',handleBtn);
+    //     button.addEventListener('click',handleBtn);
         
+    // }
+ 

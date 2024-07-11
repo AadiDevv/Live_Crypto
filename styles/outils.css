@@ -13,6 +13,9 @@
 .negative{
     color:#F44336 ;
 }
+strong{
+    color: var(--clr-info);
+}
 
 
 /* xs */

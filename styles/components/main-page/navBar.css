@@ -1,12 +1,39 @@
-.nav{
-    display: flex;
-    justify-content:left;
-    margin-top: 30px;
-    padding: 0 20px;
+
+ /* HEADER */
+ /*Title*/
+    h1{
+        /* text-align: center; */
+        font-size: var(--size-3xl);
+        color: var(--clr-info);
+    }
+    /* Makes a bigger "C" in the h1 */
+    h1 span{
+        font-size: larger;
+    }
+/*Nav*/
+header{
+    background-color: var(--clr-slate800);
 }
-.nav__li-container{
- display: none;
-}
+    .nav-main{
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-around;
+        
+    }
+    .nav-main__menu{
+        display: flex;
+        justify-content: left;
+        gap: 30px;
+        padding: 10px 40px;
+       
+    }
+    .nav-main__menu li{
+        /* background-color: aliceblue; */
+    }
+    .nav-main__menu a{
+        font-size: var(--size-sm);
+    }
+    
 
 /*Currency choice*/
 .nav__currency{

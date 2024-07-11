@@ -1,4 +1,4 @@
-.mobileNav{
+/* .mobileNav{
     position: absolute;
     top: 0;
     width: 70%;
@@ -11,16 +11,7 @@
     border-right: 1px solid var(--clr-light);
     border-radius: 5px;
 }
-/* .mobileNav div{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    background-color: #1e293b00;
-    z-index: 1;
-    height: 85%;
-    width: 80%;
 
-} */
 
 .mobileNav__li-container{
 margin-top: 100px;
@@ -45,4 +36,4 @@ gap: 30px;
     height: var(--size-2xl);
      width: var(--size-2xl);
 
-}
+} */

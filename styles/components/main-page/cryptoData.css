@@ -1,4 +1,4 @@
-/*TOKEN DATA*/
+TOKEN DATA
 
 /* section */
 .crypto {
@@ -96,4 +96,35 @@
     .icon_reddit {
         width: 20px;
         height: 20px;
+    }
+
+/* DESCRIPTION */
+    .introduction{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .crypto__description {
+        color: var(--clr-slate600);
+        font-size: var(--size-base);
+    }
+    .introduction__text-background{
+        background-color: #2e2e2e;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+
+    }
+    .introduction__text h3{
+        text-align: center;
+        margin-bottom: 10px;
+        
+    }
+    .introduction__text p{
+        margin: 0 10px;
+        padding: 10px;
+        min-width: 300px;
+        max-width: 400px;
+        text-align:left;
     }
