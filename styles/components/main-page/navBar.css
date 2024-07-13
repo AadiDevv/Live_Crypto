@@ -1,56 +1,153 @@
 
  /* HEADER */
- /*Title*/
-    h1{
-        /* text-align: center; */
-        font-size: var(--size-3xl);
-        color: var(--clr-info);
+    header{
+        background-color: var(--clr-slate800);
+        position: relative;
+        display: flex;
+        justify-content: center;   
+        border-bottom: 2px solid var(--clr-interaction);
+     
     }
-    /* Makes a bigger "C" in the h1 */
-    h1 span{
-        font-size: larger;
-    }
+ 
 /*Nav*/
-header{
-    background-color: var(--clr-slate800);
-}
-    .nav-main{
+    header nav{
         padding: 10px 30px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 60px;
         
     }
+    /*Title*/
+        .nav-main__title-container{
+            text-wrap: nowrap;
+            margin: 0;
+        }
+        h1{
+            /* text-align: center; */
+            font-size: var(--size-3xl);
+            color: var(--clr-info);
+        }
+        /* Makes a bigger "C" in the h1 */
+        .c{
+            font-size: larger;
+        }
+        .o{
+            color: rgb(182, 7, 7);
+        }
+        .icon{
+            color: var(--clr-info);
+            font-weight: bold;
+        }
+    /* <ul> */
+        .nav-main__menu{
+            display: none;
+            justify-content: left;
+            gap: 30px;
+            padding: 10px 40px;
+        
+        }
+        .nav-main__menu li{
+            /* background-color: aliceblue; */
+        }
+        .nav-main__menu a{
+            font-size: var(--size-sm);
+        }
+    /* </ul> */
+    /* burger <ul> */
+    .burger-button i{
+        font-size: 24px;
+    }
+    .burger-menu__container{
+        position: absolute;
+        background-color:#212d41cb;
+        backdrop-filter: blur(5px);
+        height: 200px;
+        width: 200px;
+        top: 60px;
+        right: 30px;
+        border-radius: 5px;
+        padding: 10px;
+        z-index: 1;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 2px solid var(--clr-interaction);
+    }
+     /* div */
+    .burger-menu{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: first baseline;
+
+    }
+    .burger-menu ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .burger-menu a{
+        font-size: var(--size-base);
+    }
+    .burger-menu a:hover{
+        cursor: pointer;
+        color:var(--clr-light);
+        transition: 0.5s;
+    }
+    .space-bar{
+        width: 100px;
+        background-color: var(--clr-slate400);
+        height: 1px;
+        
+    }
+   
+   
+/*Currency choice*/
+    .nav__currency{
+        display: flex;
+        justify-content: right;
+    }
+    #nav__currency-choice{
+        border-radius: 5px;
+        background-color: var(--clr-slate800);
+        color: var( --clr-options);
+        border: 1px solid var(--clr-slate400);
+        outline:none
+    }
+    .nav__currency-label{
+        font-style: italic;
+        font-size:  var( --size-sm	);
+        text-transform: lowercase;
+        color: var(--clr-slate400);
+        display: none;
+    }
+    /* m */
+@media(min-width :768px){
     .nav-main__menu{
         display: flex;
-        justify-content: left;
-        gap: 30px;
-        padding: 10px 40px;
-       
     }
-    .nav-main__menu li{
-        /* background-color: aliceblue; */
+    .burger-button{
+        display: none;
     }
-    .nav-main__menu a{
-        font-size: var(--size-sm);
+    header nav{
+        
+        justify-content: space-evenly;
+        
     }
-    
+}
+/* l */
+/* @media(min-width :1024px){
+   
+} */
+/* xl */
+/* @media(min-width :1280px){
 
-/*Currency choice*/
-.nav__currency{
-    display: flex;
-    justify-content: right;
-}
-#nav__currency-choice{
-    border-radius: 5px;
-    background-color: var(--clr-slate800);
-    color: var( --clr-options);
-    border: 1px solid var(--clr-slate400);
-    outline:none
-}
-.nav__currency-label{
-    font-style: italic;
-    font-size:  var( --size-sm	);
-    text-transform: lowercase;
-    color: var(--clr-slate400);
-    display: none;
-}
+} */
+/* 2xl */
+/* @media(min-width :1536px){
