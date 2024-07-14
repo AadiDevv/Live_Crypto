@@ -4,9 +4,11 @@
         background-color: var(--clr-slate800);
         position: relative;
         display: flex;
-        justify-content: center;   
+        justify-content: center;
+        align-items: center;   
         border-bottom: 2px solid var(--clr-interaction);
-     
+        height: 60px;
+
     }
  
 /*Nav*/
@@ -14,9 +16,8 @@
         padding: 10px 30px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: first baseline;
         width: 100%;
-        height: 60px;
         
     }
     /*Title*/
@@ -39,6 +40,7 @@
         .icon{
             color: var(--clr-info);
             font-weight: bold;
+            cursor: default;
         }
     /* <ul> */
         .nav-main__menu{
@@ -54,16 +56,21 @@
         .nav-main__menu a{
             font-size: var(--size-sm);
         }
+        
     /* </ul> */
     /* burger <ul> */
     .burger-button i{
-        font-size: 24px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .burger-button i:hover{
+        transform: scale(1.05);
     }
     .burger-menu__container{
         position: absolute;
         background-color:#212d41cb;
         backdrop-filter: blur(5px);
-        height: 200px;
+        height: 0px;
         width: 200px;
         top: 60px;
         right: 30px;
@@ -71,11 +78,17 @@
         padding: 10px;
         z-index: 1;
 
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
         border-bottom: 2px solid var(--clr-interaction);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        
+    }
+    .burger-menu__container.open{
+       display: flex;
+       height: 200px;
     }
      /* div */
     .burger-menu{
@@ -95,10 +108,10 @@
     .burger-menu a{
         font-size: var(--size-base);
     }
-    .burger-menu a:hover{
+    .burger-menu a,.nav-main__menu a:hover{
         cursor: pointer;
         color:var(--clr-light);
-        transition: 0.5s;
+        transition: 0.25s;
     }
     .space-bar{
         width: 100px;
@@ -113,12 +126,15 @@
         display: flex;
         justify-content: right;
     }
+    .nav__currency__container{
+        margin-right: 40px;
+    }
     #nav__currency-choice{
         border-radius: 5px;
         background-color: var(--clr-slate800);
         color: var( --clr-options);
         border: 1px solid var(--clr-slate400);
-        outline:none
+        outline:none;
     }
     .nav__currency-label{
         font-style: italic;
@@ -127,27 +143,89 @@
         color: var(--clr-slate400);
         display: none;
     }
-    /* m */
-@media(min-width :768px){
-    .nav-main__menu{
-        display: flex;
-    }
-    .burger-button{
-        display: none;
-    }
-    header nav{
-        
-        justify-content: space-evenly;
+
+/* xs */
+@media(min-width :475px){
+    h1{
+        /* text-align: center; */
+        font-size: var(--size-3xl);
         
     }
 }
+/* s */
+@media(min-width :640px){
+    header{
+        height: 80px;
+    }
+}
+    /* m */
+    @media(min-width :768px){
+        h1{
+            /* text-align: center; */
+            font-size: var(--size-3xl);
+            
+        }
+        header{
+            height: 90px;
+        }
+        .nav-main__menu{
+            display: flex;
+        }
+        .burger-button{
+            display: none;
+        }
+        header nav{
+            justify-content: space-between;
+            padding: 10px 50px;
+        }
+        .nav-main__menu a{
+            font-size: var(--size-lg);
+        }
+        #nav__currency-choice{
+            font-size: var(--size-sm);
+        }
+        body{
+            font-size: var(--size-lg);
+        }
+    }
 /* l */
-/* @media(min-width :1024px){
-   
-} */
+@media(min-width :1024px){
+    header{
+        height: 120px;
+    }
+    h1{
+        font-size: var(--size-4xl);
+    }
+    .nav-main__menu a{
+        font-size: 18px;
+    }
+    .nav-main__menu {
+        gap: 50px;
+    }
+    #nav__currency-choice{
+        font-size: 16px;
+    }
+    body{
+        font-size: var(--size-lg);
+    }
+}
 /* xl */
-/* @media(min-width :1280px){
+@media(min-width :1280px){
+    header nav{
+        padding: 10px 100px;
+    }
 
-} */
+    .nav-main__menu {
+        gap: 80px;
+    }
+  
+    body{
+        font-size: var(--size-xl);
+    }
+}
 /* 2xl */
-/* @media(min-width :1536px){
+ @media(min-width :1536px){
+    header nav{
+        padding: 10px 160px;
+    }
+}

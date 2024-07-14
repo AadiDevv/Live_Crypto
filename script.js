@@ -5,6 +5,9 @@
 
     //nav
     const currencyChoiceEl = document.querySelector('#nav__currency-choice');
+    const burgerButtonEl = document.querySelector('.burger-button');
+    const burgerIconEl = document.querySelector('#burger-icon');
+    const burgerMenuEl = document.querySelector('.burger-menu__container');
     //search section
     const formEl = document.querySelector('form');
     const inputEl = document.querySelector('.form__input');
@@ -21,6 +24,7 @@
 
     //other info
     const cryptoContainerEl = document.querySelector('.crypto');
+    const cryptoContainer2El = document.querySelector('.crypto2');
     const cryptoDescEl = document.querySelector('.crypto__description')
     const button = document.querySelector('.description__btn');
 
@@ -116,15 +120,19 @@
                     let tknReddit = data.links.subreddit_url;
 
                 //clear from previous data
+                cryptoContainer2El.innerHTML= '';
                 cryptoContainerEl.innerHTML= '';
                 tableContainerEl.innerHTML='';
+                //display the section
+                // cryptoContainerEl.classList.add('section-marge');
+                cryptoContainer2El.classList.add('section-marge');
+
                
                 //IMPLIMENT DATA TO HTML
                     // General
                         
                         let cryptoNamePriceEl = document.createElement('div');
                         cryptoNamePriceEl.classList.add('crypto__nameAndprice')
-
                         //name
                         let cryptoNameEl = document.createElement('h2');
                         cryptoNameEl.classList.add('crypto__name');
@@ -135,7 +143,7 @@
                         cryptoPriceEl.classList.add('crypto__price-container')
                         cryptoPriceEl.innerHTML = `<h2 class="crypto__price">${tknPrice.toLocaleString('fr-FR')}<span class="crypto__price-devise">${currencyLogo}</span></h2><p class="crypto__price-change">${tknPriceChangeD.toFixed(2)} %</p>`;
                         cryptoNamePriceEl.appendChild(cryptoPriceEl);
-                        cryptoContainerEl.appendChild(cryptoNamePriceEl);
+                        cryptoContainer2El.appendChild(cryptoNamePriceEl);
                         //apply color for changing data
                         let a = document.querySelector('.crypto__price-change');
                         dataChangeColor(tknPriceChangeD,a); 
@@ -169,9 +177,11 @@
                         };
                         tab2();     
                     //Details
+                       
                         let cryptoDetailsEl = document.createElement('div');
                         cryptoDetailsEl.classList.add('crypto__details');
                         cryptoDetailsEl.innerHTML = `
+                            <div class="crypto__details-title">Market information for ${tknShortName} :</div>
                             <p><strong>Market Cap Rank :</strong> <span class="crypto__rank" >${tknMarketRank}</span></p>
                             <p><strong>24h Volume :</strong> <span class="crypto__volume-24h" >${formatNumber(tknVolumeTotal)}${currencyLogo}</span></p>
                             <p><strong>Total Supply :</strong> <span class="crypto__total-supply" >${formatNumber(tknTotalSupply)}</span></p>
@@ -338,9 +348,9 @@
 
     tbChoiceEl.forEach(element=>{
         element.addEventListener('click',(event)=>{
-
+            event.preventDefault();
             tbChoiceEl.forEach(el=> el.classList.remove('active'));
-            event.target.classList.add('active');
+            event.target.classList.toggle('active');
         })
     })
     
@@ -470,4 +480,11 @@
     //     button.addEventListener('click',handleBtn);
         
     // }
- 
+    // NAV
+    function handleBurgerMenu(){
+        burgerMenuEl.classList.toggle('open');
+            const isOpen = burgerMenuEl.classList.contains('open');
+            burgerIconEl.classList = isOpen? 'fa-solid fa-xmark':'fa-solid fa-bars'
+    }
+        burgerButtonEl.addEventListener('click',handleBurgerMenu);       
+    

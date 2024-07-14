@@ -1,7 +1,7 @@
 /* MEDIA QUERIES FOR RESPONSIVNES ON DIFFERENT DEVICES */
 
 .section-marge{
-    margin-top: 30px;
+    margin-top: 70px;
 }
 .div-margin{
     margin-bottom: 30px;
@@ -23,9 +23,7 @@ strong{
     .container{
         max-width: 475px;
     }
-    .section-marge{
-        margin-top: 20px;
-    }
+   
 }
 /* s */
 @media(min-width :640px){
@@ -48,9 +46,9 @@ strong{
     .container{
         max-width: 1024px;
     }
-    .section-marge{
+    /* .section-marge{
         margin-top: 6rem;
-    }
+    } */
     
     
 }
@@ -59,12 +57,16 @@ strong{
     .container{
         max-width: 1280px;
     }
+    body{
+        font-size: var(--size-sm);
+    }
 }
 /* 2xl */
 @media(min-width :1536px){
     .container{
         max-width: 1536px;
     }
+    
 }
 
 /* xs */

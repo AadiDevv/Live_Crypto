@@ -30,19 +30,19 @@
 
     <header>
 <!-- NAVS -->
-        <nav class="">
+        <nav>
                 <!-- TITLE -->
                  <div class="nav-main__title-container">
                     <h1>live <span class="c">c</span>rypt<span class="o">o</span></h1>
                  </div>
-           
+                 
             <ul class="nav-main__menu">
                 <li><a href="#search">Search crypto</a></li>
                 <li><a href="#overView">Over View</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
             <div class="burger-button">
-                <i class="fa-solid fa-bars"></i>
+                <i id="burger-icon" class="fa-solid fa-bars"></i>
             </div>
             <div class="burger-menu__container">
                 <div class="burger-menu">
@@ -55,7 +55,7 @@
                 
                 
                 <div class="space-bar"></div>
-                <div class="burger-menu__icon icon"><span class="c">LC</span></div>
+                <div class="burger-menu__icon icon">L<span class="c">C</span class="o">O<span></span></div>
             </div>
         </nav>
          <!-- <nav class="mobileNav">
@@ -70,25 +70,25 @@
     </nav> -->
        
     </header>
-
- 
-
 <!-- CURRENCY CHOICE -->
     <section class="nav__currency section-marge">
-        <label class="nav__currency-label" for="nav__currency-choice">Device</label>
-        <select name="currency" id="nav__currency-choice">
-            <option value="usd">$usd</option>
-            <option value="eur">€eur</option>
-            <option value="gbp">£gbp</option>
-            <option value="jpy">¥jpy</option>
-            <option value="cny">¥cny</option>
-            <option value="inr">₹inr</option>
-    </select>
+        <div class="nav__currency__container">
+            <label class="nav__currency-label" for="nav__currency-choice">Device</label>
+            <select name="currency" id="nav__currency-choice">
+                <option value="usd">$usd</option>
+                <option value="eur">€eur</option>
+                <option value="gbp">£gbp</option>
+                <option value="jpy">¥jpy</option>
+                <option value="cny">¥cny</option>
+                <option value="inr">₹inr</option>
+            </select>
+        </div>
+        
     </section>
     
 <!-- SEARCH SECTION -->
-    <section class="section-form container section-marge">
-
+    <section class="section-form  section-marge">
+        
         <form method="GET">
             <div class="form">
                 <input class="form__input" type="text" placeholder="search crypto ..." >
@@ -99,18 +99,25 @@
             
             <div class="suggestions"></div>
         </form>
+
     </section>
 
+   
 
 <!-- OTHER TOKEN INFORMATIONS AND DETAILS -->
-    <section class="crypto section-marge">
-
-        <!-- <div class="crypto__nameAndprice div-margin">
-            <h2 class="crypto__name"><img src=""><p>bitcoin</p><span class="crypto__name-short">(BTC)</span></h2>
+<section class="crypto2 section-marge">
+    <!-- <div class="crypto__nameAndprice div-margin">
+        <h2 class="crypto__name"><img src=""><p>bitcoin</p><span class="crypto__name-short">(BTC)</span></h2>
     
-            <div class="crypto__price-container"><h2 class="crypto__price">60000<span class="crypto__price-devise">$</span></h2><p class="crypto__price-change">2%</p></div>
-        </div>
+        <div class="crypto__price-container"><h2 class="crypto__price">60000<span class="crypto__price-devise">$</span></h2><p class="crypto__price-change">2%</p></div>
+    </div> -->
+</section>
+
+<main >
+    <section class="crypto">
+<!-- 
         <div class="crypto__details">
+        <div class="crypto__details-title">Market information for btc</div>
         <p><strong>Market Cap Rank :</strong> <span class="crypto__rank" >${tknMarketRank}</span></p>
         <p><strong>24h Volume :</strong> <span class="crypto__volume-24h" >${formatNumber(tknVolumeTotal)}${currencyLogo}</span></p>
         <p><strong>Total Supply :</strong> <span class="crypto__total-supply" >${formatNumber(tknTotalSupply)}</span></p>
@@ -119,17 +126,17 @@
         <p><strong>Homepage :</strong> <a class="crypto__homepage" href="${tknHomePage}"  target="_blank">${tknHomePage}</a></p>
         <p><strong>Reddit :</strong> <a class="crypto__reddit" href="${tknReddit}"  target="_blank"><img class="icon_reddit" src="./styles/Medias/reddit-logo-2436.png" alt="Reddit Icon"></a></p>
         
-        </div> -->
-        
+        </div>
+         -->
         
     </section>
-<!-- TABLES OF TOKEN INFORMATIONS AND DETAILS -->
-    <section class="table section-marge">
+    <!-- TABLES OF TOKEN INFORMATIONS AND DETAILS -->
+    <section class="table ">
         <div class="table__choice-container">
             <a href="#table__priceChange" class="table__choice price_choice "><span class="table__span active">Price Variation(%)</span></a >
             <a href="#table__market" class="table__choice market_choice"><span class="table__span ">Market Cap</span></a >
         </div>
-
+    
         <div class="table__scroll">
             <div class="table__width">
                 <div class="table__container">
@@ -141,7 +148,7 @@
                                 <th>Price Change</th>
                             </tr>
                         </thead>
-
+    
                         <tbody>
                             <tr>
                                 <td>24h Change</td>
@@ -158,7 +165,7 @@
                         </tbody>
                     
                     </table>
-
+    
                     <table class="tables table__market" id="table__market">
                         <thead>
                             <tr>
@@ -166,7 +173,7 @@
                                 <th>Price Change</th>
                             </tr>
                         </thead>
-
+    
                         <tbody>
                             <tr>
                                 <td>24h Change</td>
@@ -188,8 +195,12 @@
         
         </div>
         
-
+    
     </section>
+    
+</main>
+
+
 
     <section class="introduction container section-marge">
         <div class="crypto__description">
@@ -208,6 +219,9 @@
         </div>
     </section>
 
+<section id="contact">
+    <i class="fas fa-phone"></i>
+</section>
     <footer id="a" class="container section-marge">a </footer>
     <script src="script.js"></script>
 </body>

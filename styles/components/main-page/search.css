@@ -11,24 +11,26 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 0 auto;
+      margin-right: 0 auto;
+      justify-content: center;
+      width: 100%;
    }
 
 /* FORM */
    .form{
       display: flex;
-      position: relative;
-      align-items: center;
-      justify-content: space-between;
+      /* position: relative; */
+
+      justify-content:space-between;
       width: 250px;
       background-color: rgba(255, 255, 255, 0.11);
-      padding: 5px;
+      padding: 5px 20px;
       border-radius: 28px;
-      transition: background-color 0.3s;
+      /* transition: 0.3s; */
 
    }
    .form:hover{
-      border: 1px solid black;
+      border: 1px solid var(--clr-interaction);
 
    }
    .form__input {
@@ -37,12 +39,13 @@
       border-radius: 28px;
       background:transparent;
       outline: none;
-      margin-right: 10px;
+      /* margin-right: 10px; */
       color: rgb(171, 202, 248);
       font-size:var( --size-sm) ;
       font-family: 'Montserrat', Arial, sans-serif;
        /* font-family: 'Lato', Helvetica, Arial, sans-serif; */
-  }
+      
+      }
   
   .form__input::placeholder {
    color: rgba(255, 255, 255, 0.452);
@@ -54,7 +57,7 @@
    .form__submit{
       background:transparent;
       border: none;
-      padding-right: 10px;
+      /* margin-right: 10px; */
    }
    .form__submit:hover{
      cursor: pointer;
@@ -67,8 +70,8 @@
    }
    /* form suggestions */
    .suggestions{
-      padding: 0 10px;
-      position: absolute;
+      padding: 5px 20px;
+      position:absolute;
       background-color: #1e1e1ef5;
       width: 250px;
       border-radius: 5px;
@@ -89,15 +92,40 @@
    .form__suggestion-item .icon{
       width:var(--size-m);
    }
-   /* CRYPTO */
-   .crypto{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-   }
-   
+ 
    /* INTODUCTION */
    .introduction{
       width: 85%;
       margin: 0 auto;
    }
+   /* xs */
+/* @media(min-width :475px){
+ 
+} */
+/* s */
+/* @media(min-width :640px){
+   
+} */
+/* m */
+@media(min-width :768px){
+   .form, .suggestions{
+      width: 300px;
+      padding: 10px 20px;
+   }
+   
+   .form__input {  
+      font-size:16px ;
+      }
+}
+/* l */
+/* @media(min-width :1024px){
+   
+} */
+/* xl */
+@media(min-width :1280px){
+   .form__input {  
+      font-size:18px ;
+      }
+}
+/* 2xl */
+/* @media(min-width :1536px){

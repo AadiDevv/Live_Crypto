@@ -1,4 +1,4 @@
-TOKEN DATA
+/* TOKEN DATA */
 
 /* section */
 .crypto {
@@ -6,7 +6,14 @@ TOKEN DATA
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    margin-top: 20px;
+    margin: 25px 0;
+
     
+}
+.crypto2{
+    display: flex;
+    justify-content: center;
 }
 /* Name */ 
     .crypto__nameAndprice{
@@ -15,6 +22,7 @@ TOKEN DATA
         align-items:center;
         gap: 20px;
     }
+   
     .crypto__name{
         display: flex;
         align-items: center;
@@ -38,22 +46,32 @@ TOKEN DATA
     .crypto__price-container{
         display: flex;
         align-items:center;
-        /* box-shadow: 0px 20px 10px rgba(0, 0, 0,0.15);
+        
         padding: 10px;
-        border-radius: 25px; */
+        
+        gap:5px
     }
     .crypto__price{
         font-size: var(--size-4xl);
         margin-right: 5px;
     }
     .crypto__price-devise{
-        font-size: var(--size-xs);
+        font-size: 22px;
         font-weight: lighter;
     }
 
 /* Gen data */
     /* section div-child data */
+    .crypto__details-title{
+        font-weight: 500;
+        color: var(--clr-slate400);
+        font-weight: bold;
+        margin-top: 25px;
+        margin-bottom: 10px;
+
+    }
     .crypto__details {
+        border-top: 2px solid var(--clr-slate600); ;
         padding: 10px 25px;
         display: flex;
         flex-direction: column;
@@ -128,3 +146,52 @@ TOKEN DATA
         max-width: 400px;
         text-align:left;
     }
+ /* xs */
+/* @media(min-width :475px){
+ 
+} */
+/* s */
+/* @media(min-width :640px){
+   
+} */
+/* m */
+@media(min-width :768px){
+   
+ }
+ /* l */
+ /* @media(min-width :1024px){
+    
+ } */
+ /* xl */
+ @media(min-width :1280px){
+   main{
+    display: flex;
+    justify-content: center;
+    gap:50px;
+    align-items: flex-start;
+   }
+   .crypto__details p{
+    font-size: 16px;
+   }
+   .crypto__details {
+    padding: 10px 25px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    border: none;
+   }
+   .table{
+    margin-top: 20px;
+   }
+   .crypto__nameAndprice{
+    border-bottom: 2px solid var(--clr-slate600);
+    width: 60%;
+    padding: 30px;
+   }
+   .crypto__price{
+    font-size: var(--size-5xl);
+   
+}
+ }
+ /* 2xl */
+ /* @media(min-width :1536px){
