@@ -108,7 +108,7 @@
     .burger-menu a{
         font-size: var(--size-base);
     }
-    .burger-menu a,.nav-main__menu a:hover{
+    .burger-menu a:hover,.nav-main__menu a:hover{
         cursor: pointer;
         color:var(--clr-light);
         transition: 0.25s;

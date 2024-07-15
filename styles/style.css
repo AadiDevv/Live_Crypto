@@ -86,9 +86,9 @@
     cursor: default;
   }
   
-   /* img,video,picture,
+   img,video,picture,
   video,canvas,svg{
     display: block;
     max-width: 100%;
     user-select: none;
-  }  */
+  } 
