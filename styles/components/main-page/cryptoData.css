@@ -59,7 +59,12 @@
         font-size: 22px;
         font-weight: lighter;
     }
-
+    .crypto__price-change{
+        display: flex;
+        align-items: first baseline;
+        gap: 3px;
+        flex-direction: row-reverse;
+    }
 /* Gen data */
     /* section div-child data */
     .crypto__details-title{

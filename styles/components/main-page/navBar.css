@@ -8,6 +8,7 @@
         align-items: center;   
         border-bottom: 2px solid var(--clr-interaction);
         height: 60px;
+        min-width: 500px;
 
     }
  
@@ -34,9 +35,9 @@
         .c{
             font-size: larger;
         }
-        .o{
+        /* .o{
             color: rgb(182, 7, 7);
-        }
+        } */
         .icon{
             color: var(--clr-info);
             font-weight: bold;

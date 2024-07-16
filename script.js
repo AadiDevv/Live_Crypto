@@ -440,14 +440,21 @@
     }
     scrollBehavior();
     function dataChangeColor(data,htmlEL){
-            
+            let arrowNeg = document.createElement('span');
+            let arrowPos = document.createElement('span');
+            arrowNeg.classList.add('triangle-down');
+            arrowPos.classList.add('triangle-up')
+
+
             if(data < 0){
                 htmlEL.classList.remove('positive');
                 htmlEL.classList.add('negative');
+                htmlEL.appendChild(arrowNeg);
                 
             }else if(data > 0){
                 htmlEL.classList.remove('negative');
                 htmlEL.classList.add('positive');
+                htmlEL.appendChild(arrowPos);
             }else{
                 htmlEL.classList.remove('negative');
                 htmlEL.classList.remove('positive');
@@ -481,10 +488,16 @@
         
     // }
     // NAV
-    function handleBurgerMenu(){
-        burgerMenuEl.classList.toggle('open');
-            const isOpen = burgerMenuEl.classList.contains('open');
-            burgerIconEl.classList = isOpen? 'fa-solid fa-xmark':'fa-solid fa-bars'
-    }
-        burgerButtonEl.addEventListener('click',handleBurgerMenu);       
-    
+        // Burger menu
+            // open/close
+            function handleBurgerMenu(){
+                burgerMenuEl.classList.toggle('open');
+                    const isOpen = burgerMenuEl.classList.contains('open');
+                    burgerIconEl.classList = isOpen? 'fa-solid fa-xmark':'fa-solid fa-bars'
+            }
+            burgerButtonEl.addEventListener('click',handleBurgerMenu);       
+            // close when menu-tabs clicked
+            const menuTabsEl = document.querySelectorAll('.burger-menu__a');
+            menuTabsEl.forEach(el=>{
+                el.addEventListener('click',handleBurgerMenu);
+            })
