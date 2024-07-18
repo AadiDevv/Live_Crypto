@@ -84,6 +84,12 @@
 }
 tr .cell2{
     font-style: italic;
+    /* for handling the triangle of price fluctuation */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 3px;
 }
 tbody tr:nth-of-type(even){
     background-color: #1e293b8a;
