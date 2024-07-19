@@ -141,7 +141,13 @@
                         //price
                         let cryptoPriceEl = document.createElement('div');
                         cryptoPriceEl.classList.add('crypto__price-container')
-                        cryptoPriceEl.innerHTML = `<h2 class="crypto__price">${tknPrice.toLocaleString('fr-FR')}<span class="crypto__price-devise">${currencyLogo}</span></h2><p class="crypto__price-change">${tknPriceChangeD.toFixed(2)} %</p>`;
+                        cryptoPriceEl.innerHTML = `
+                        <h2 class="crypto__price">${tknPrice.toLocaleString('fr-FR')}<span class="crypto__price-devise">${currencyLogo}</span></h2>
+                        <span class="crypto__price-change-container">
+                            <p class="crypto__price-change">${tknPriceChangeD.toFixed(2)} %</p>
+                            <p class="crypto__price-change-laps">24h</p>
+                        </span>
+                        `;
                         cryptoNamePriceEl.appendChild(cryptoPriceEl);
                         cryptoContainer2El.appendChild(cryptoNamePriceEl);
                         //apply color for changing data
@@ -188,7 +194,7 @@
                             <p><strong>Circulating Supply :</strong> <span class="crypto__circulating-supply" >${formatNumber(tknCirculeSupply)}</span></p>
                             <p><strong>Genesis Date :</strong> <span class="crypto__genesis-date">${tknCreaDate}</span></p>
                             <p><strong>Homepage :</strong> <a class="crypto__homepage" href="${tknHomePage}"  target="_blank">${tknHomePage}</a></p>
-                            <p><strong>Reddit :</strong> <a class="crypto__reddit" href="${tknReddit}"  target="_blank"><img class="icon_reddit" src="./styles/Medias/reddit-logo-2436.png" alt="Reddit Icon"></a></p>
+                            <p><strong>Reddit :</strong> <a class="crypto__reddit" href="${tknReddit}"  target="_blank"><img class="icon_reddit" src="../styles/Medias/reddit-logo-2436.png" alt="Reddit Icon"></a></p>
                             
                         `;
                         cryptoContainerEl.appendChild(cryptoDetailsEl);

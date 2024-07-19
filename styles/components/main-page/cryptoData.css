@@ -45,7 +45,7 @@
 /* Price */
     .crypto__price-container{
         display: flex;
-        align-items:center;
+        align-items:flex-end;
         
         padding: 10px;
         
@@ -54,6 +54,7 @@
     .crypto__price{
         font-size: var(--size-4xl);
         margin-right: 5px;
+        padding-bottom: 5px;
     }
     .crypto__price-devise{
         font-size: 22px;
@@ -64,6 +65,17 @@
         align-items: first baseline;
         gap: 3px;
         flex-direction: row-reverse;
+    }
+    .crypto__price-change-laps{
+        font-size: 10px;
+        color: var(--clr-slate600);
+        
+    }
+    .crypto__price-change-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 /* Gen data */
     /* section div-child data */
