@@ -194,7 +194,7 @@
                             <p><strong>Circulating Supply :</strong> <span class="crypto__circulating-supply" >${formatNumber(tknCirculeSupply)}</span></p>
                             <p><strong>Genesis Date :</strong> <span class="crypto__genesis-date">${tknCreaDate}</span></p>
                             <p><strong>Homepage :</strong> <a class="crypto__homepage" href="${tknHomePage}"  target="_blank">${tknHomePage}</a></p>
-                            <p><strong>Reddit :</strong> <a class="crypto__reddit" href="${tknReddit}"  target="_blank"><img class="icon_reddit" src="../styles/Medias/reddit-logo-2436.png" alt="Reddit Icon"></a></p>
+                            <p><strong>Reddit :</strong> <a class="crypto__reddit" href="${tknReddit}"  target="_blank"><img class="icon_reddit" src="./styles/Medias/reddit-logo-2436.png" alt="Reddit Icon"></a></p>
                             
                         `;
                         cryptoContainerEl.appendChild(cryptoDetailsEl);
