@@ -1,11 +1,14 @@
 # LiveCrypto
 
-Welcome!
+**Welcome!**
 
 LiveCrypto was entirely designed and created by myself, making this site a unique and original work.
-I am happy to share my work with you and hope you enjoy your experience here.
+I am happy to share my work with you and hope you enjoy your experience here.  
+ 
+This web site is a real-time platform for tracking cryptocurrency exchange rates. This application allows you to convert your cryptocurrencies into euros, dollars, and other currencies, offering real-time updates and accurate market information. Explore the latest market trends and make quick, reliable conversions to stay informed and make smart decisions.  
 
-This web site is a real-time platform for tracking cryptocurrency exchange rates. This application allows you to convert your cryptocurrencies into euros, dollars, and other currencies, offering real-time updates and accurate market information. Explore the latest market trends and make quick, reliable conversions to stay informed and make smart decisions.
+**View in action :**  
+[Click here](https://aadidevv.github.io/Live_Crypto/) to check it out! 
 
 
 
