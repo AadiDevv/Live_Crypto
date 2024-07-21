@@ -60,13 +60,14 @@
  
 //SUBMISSION
     // Event listener for form submission
-    formEl.addEventListener('submit', (e)=>{
+    function submitForm(e){
         e.preventDefault();
         inputData = inputEl.value.trim().toLowerCase();
         newCryptoSearch = true;
         getCrypto(inputData);
         inputEl.value = '';
-    })
+    }
+    formEl.addEventListener('submit',submitForm)
     //Fetch fuction to get the crypto data
     const getCrypto = async function(crypto){
 
@@ -264,7 +265,7 @@
             const tokens = await fetchSuggestions(inputData);
             displayList(tokens); 
         }else{
-            suggestionsEl.style.display='none'
+            suggestionsEl.style.display='none';
         }
         
     })
@@ -321,8 +322,9 @@
                 
                 suggestionsEl.appendChild(item);
     
-                item.addEventListener('click',()=>{
+                item.addEventListener('click',(e)=>{
                     inputEl.value = tokens[i].id;
+                    submitForm(e);
                     suggestionsEl.style.display='none'
                 });
             
