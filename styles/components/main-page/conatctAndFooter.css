@@ -9,7 +9,9 @@
     box-sizing: border-box;
     border-radius: 5px 5px 0 0;
     border-top: 3px solid rgba(53, 52, 52, 0.87);
-    min-width: 520px;
+    
+    /* min-width: 520px; */
+
 }
 
 
@@ -82,7 +84,7 @@
     margin-top: 25px;
     width: 100%;
     background-color: black;
-    padding: 5px;
+    padding: 5px 0;
     text-align: center;
 }
 

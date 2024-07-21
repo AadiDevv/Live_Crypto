@@ -42,7 +42,7 @@
     scroll-behavior: smooth;
     
   }
-  
+   
   body{
     /* font-family: 'General Sans', sans-serif; */
     /* font-family: 'Roboto', Helvetica, Arial, sans-serif; */
@@ -52,6 +52,7 @@
     background-color: var(--clr-dark);
     color: var(--clr-light);
     height: 100vh;
+    width: 100vw;
   }
   h1, .icon{
     text-transform: uppercase;
