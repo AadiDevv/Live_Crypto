@@ -52,9 +52,7 @@
             padding: 10px 40px;
         
         }
-        .nav-main__menu li{
-            /* background-color: aliceblue; */
-        }
+        
         .nav-main__menu a{
             font-size: var(--size-sm);
         }
