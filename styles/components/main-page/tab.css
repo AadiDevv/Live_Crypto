@@ -12,7 +12,7 @@
         justify-content: space-evenly;
         border-top: 2px solid var(--clr-slate600);
         padding: 10px 0px;
-        width: 400px;
+        width: 300px;
         padding-top: 25px;
 
     }
@@ -42,7 +42,7 @@
 /*TABLE over flow*/
 .table__scroll{
     overflow-x:hidden;
-    width: 400px;
+    width: 300px;
     box-shadow: 0 50px 30px rgba(0, 0, 0,0.15);
    
 }
@@ -96,6 +96,15 @@ tbody tr:nth-of-type(even){
 }
 tbody tr:last-of-type{
     border-bottom: 2px solid  var(--clr-interaction);
+}
+/* 2xs */
+@media(min-width :380px){
+    .table__scroll{
+        width: 400px;
+    }
+    .table__choice-container{
+        width: 400px;
+    }
 }
 /* xs */
 /* @media(min-width :475px){
