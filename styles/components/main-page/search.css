@@ -82,7 +82,8 @@
       border-bottom: 1px solid rgba(148, 163, 184, 0.137);
       color: #c5d8ee96;
       display: flex;
-      gap: 5px;
+      align-items: center;
+      gap: 8px;
    }
    .form__suggestion-item:hover{
       border-bottom: 1px solid var(--clr-interaction);
@@ -90,7 +91,8 @@
       cursor: pointer;
    }
    .form__suggestion-item .icon{
-      width:var(--size-m);
+      width: 20px;
+      height: 20px;
    }
  
    /* INTODUCTION */

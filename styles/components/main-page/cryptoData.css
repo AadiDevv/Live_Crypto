@@ -35,12 +35,15 @@
         border-radius: 50px;
         /* margin-bottom: 10px; */
         box-shadow: 0px 20px 10px rgba(0, 0, 2, 0.185);
-
     }
+   
     .crypto__name p{
         margin-right: 5px;
         text-transform: capitalize;
         /* margin: ; */
+    }
+    .crypto__name img{
+        width: 30px;
     }
     .crypto__name-short{
         font-size: 0.7em;

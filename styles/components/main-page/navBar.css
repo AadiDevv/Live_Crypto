@@ -31,7 +31,21 @@
             /* text-align: center; */
             font-size: var(--size-3xl);
             color: var(--clr-info);
+            position: relative;
         }
+        /* h1::after{
+            content: '';
+            background-color:#ff0000;
+            position: absolute;
+            display: block;
+            width: 7px;
+            height: 7px;
+            border-radius: 50px;
+            top: 20px;
+            left:-12px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 8px rgb(255, 0, 0);
+        } */
         /* Makes a bigger "C" in the h1 */
         .c{
             font-size: larger;

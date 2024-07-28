@@ -90,7 +90,7 @@
                     let tknName = data.name;
                     let tknShortName = data.symbol.toUpperCase();
                     let tknPrice = data.market_data.current_price[currency];
-                    let tknIconUrl = data.image.thumb;
+                    let tknIconUrl = data.image.large;
                     //Market cap
                     let tknMarketRank = data.market_cap_rank;
                     //Prices
@@ -137,7 +137,7 @@
                         //name
                         let cryptoNameEl = document.createElement('h2');
                         cryptoNameEl.classList.add('crypto__name');
-                        cryptoNameEl.innerHTML = `<img src="${tknIconUrl}"><p>${tknName}</p><span class="crypto__name-short">(${tknShortName})</span>`;
+                        cryptoNameEl.innerHTML = `<img class="crypto__name-icon" src="${tknIconUrl}"><p>${tknName}</p><span class="crypto__name-short">(${tknShortName})</span>`;
                         cryptoNamePriceEl.appendChild(cryptoNameEl);
                         //price
                         let cryptoPriceEl = document.createElement('div');
@@ -282,14 +282,13 @@
                 data = await request.json();
                 return data.coins.map(coin => ({
                     id: coin.id,
-                    icon: coin.thumb 
+                    icon: coin.large 
                 }));
             }
         } catch (error) {
             console.log('Error while fetching')
         }
        
-
         // return fetch(url)
         // .then(response =>{
         //     return response.json();
