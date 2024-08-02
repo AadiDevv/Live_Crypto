@@ -508,3 +508,4 @@
             menuTabsEl.forEach(el=>{
                 el.addEventListener('click',handleBurgerMenu);
             })
+         

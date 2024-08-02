@@ -31,7 +31,7 @@
             /* text-align: center; */
             font-size: var(--size-3xl);
             color: var(--clr-info);
-            position: relative;
+            text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.493);
         }
         /* h1::after{
             content: '';
